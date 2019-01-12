@@ -1,15 +1,15 @@
 [
 {
 "modid": "simpleores",
-"name": "SimpleOres 2",
-"description": "A simple ore plugin for SimpleCore API, featuring 5 unique, balanced ores.",
+"name": "SimpleOres 2 Beacon Edition",
+"description": "A simple ore plugin for SimpleCore API, featuring 5 unique, balanced ores. This unofficial version fixed blocks as the base for the beacon and ingots now serves as payment for the beacon by Adahel.",
 "version": "${version}",
 "credits": "Created by AleXndrTheGr8st, updated by Sinhika",
 "logoFile": "/assets/simplecore/logos/SimpleOres.png",
 "mcversion": "${mcversion}",
 "url": "http://minecraft.curseforge.com/projects/simpleores",
 "updateUrl": "http://minecraft.curseforge.com/projects/simpleores/files",
-"authorList": [ "AleXndrTheGr8st", "Sinhika" ],
+"authorList": [ "AleXndrTheGr8st", "Sinhika", "Adahel" ],
 "parent":"",
 "screenshots": [],
 "dependencies": [simplecore]

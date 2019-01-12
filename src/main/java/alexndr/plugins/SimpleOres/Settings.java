@@ -70,11 +70,11 @@ public class Settings {
 				.setCreativeTab("SimpleDecorations").setBeaconBase(true)).asConfigBlock();
 			
 			//Items
-			copperIngot = settings.get(new ConfigItem("Copper Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.4F)).asConfigItem();
-			tinIngot = settings.get(new ConfigItem("Tin Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.4F)).asConfigItem();
-			mythrilIngot = settings.get(new ConfigItem("Mythril Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.7F)).asConfigItem();
-			adamantiumIngot = settings.get(new ConfigItem("Adamantium Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.7F)).asConfigItem();
-			onyxGem = settings.get(new ConfigItem("Onyx Gem", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(1.0F)).asConfigItem();
+			copperIngot = settings.get(new ConfigItem("Copper Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.4F).setBeaconPayment(true)).asConfigItem();
+			tinIngot = settings.get(new ConfigItem("Tin Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.4F).setBeaconPayment(true)).asConfigItem();
+			mythrilIngot = settings.get(new ConfigItem("Mythril Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.7F).setBeaconPayment(true)).asConfigItem();
+			adamantiumIngot = settings.get(new ConfigItem("Adamantium Ingot", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(0.7F).setBeaconPayment(true)).asConfigItem();
+			onyxGem = settings.get(new ConfigItem("Onyx Gem", "Items").setStackSize(64).setCreativeTab("SimpleMaterials").setSmeltingXP(1.0F).setBeaconPayment(true)).asConfigItem();
 			mythrilRod = settings.get(new ConfigItem("Mythril Rod", "Items").setStackSize(64).setCreativeTab("SimpleMaterials")).asConfigItem();
 			onyxRod = settings.get(new ConfigItem("Onyx Rod", "Items").setStackSize(64).setCreativeTab("SimpleMaterials")).asConfigItem();
 			copperBucket = settings.get(new ConfigItem("Copper Bucket", "Items").setStackSize(16).setCreativeTab("SimpleTools")).asConfigItem();

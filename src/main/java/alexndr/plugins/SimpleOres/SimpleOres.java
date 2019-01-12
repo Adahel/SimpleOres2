@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -47,6 +48,8 @@ public class SimpleOres
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		LogHelper.info("SimpleOres 2", "Loading...");
+		//Register Event Stuff
+		MinecraftForge.EVENT_BUS.register(new ClientEventHelper());
 		
 		//Configuration
 		ContentRegistry.registerPlugin(plugin);
