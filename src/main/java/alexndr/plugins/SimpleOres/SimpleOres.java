@@ -9,6 +9,8 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -49,7 +51,10 @@ public class SimpleOres
 	public void preInit(FMLPreInitializationEvent event) {
 		LogHelper.info("SimpleOres 2", "Loading...");
 		//Register Event Stuff
-		MinecraftForge.EVENT_BUS.register(new ClientEventHelper());
+		if(event.getSide() == Side.CLIENT)
+		{
+			MinecraftForge.EVENT_BUS.register(new SimpleGuiBeacon());
+		}
 		
 		//Configuration
 		ContentRegistry.registerPlugin(plugin);
@@ -77,6 +82,7 @@ public class SimpleOres
 		setTabIcons();
 		setRepairMaterials();
 		setBucketVariants();
+		registerFluidContainers();
 		setAchievementTriggers();
 		setOreGenSettings();
 	}
@@ -133,6 +139,11 @@ public class SimpleOres
 		copperBucketType.addVariant("empty", Content.copper_bucket, Blocks.air)
 						.addVariant("water", Content.copper_bucket_water, Blocks.water)
 						.setDestroyOnLava(true);
+	}
+	
+	private static void registerFluidContainers() {
+		LogHelper.verbose("SimpleOres 2", "Registering fluid containers");
+		FluidContainerRegistry.registerFluidContainer(FluidRegistry.WATER, new ItemStack(Content.copper_bucket_water), new ItemStack(Content.copper_bucket));
 	}
 	
 	private static void setAchievementTriggers() {
